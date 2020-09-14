@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Teko:wght@500&display=swap";
 *{
     margin:0px;
     padding: 0px;
@@ -7,9 +8,11 @@ body{
     font-family: 'Quicksand', sans-serif;
     display: flex;
     justify-content: center;
-    
+     background-image: radial-gradient( circle 788px at 0.7% 3.4%,  rgba(164,231,192,1) 0%, rgba(255,255,255,1) 90% ); 
+   
     overflow-y: scroll;
-    
+    background-size: cover;
+    background-repeat: space;
 }
 
 #container{
@@ -37,7 +40,8 @@ header{
     width:100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: rgba(155, 122, 233, 0.664);
+    /* background-color: rgba(155, 122, 233, 0.664); */
+    background-image: linear-gradient( 109.5deg,  rgba(76,221,242,1) 11.2%, rgba(92,121,255,1) 91.1% );
     padding-top:20px;
     padding-bottom:30px;
 
@@ -45,9 +49,15 @@ header{
 h1{
     
     padding: 7px;
-    color: rgb(73, 70, 70);
+    color: rgba(255, 255, 255, 0.863);
 }
-
+h4{
+    font-family: Quicksand;
+    letter-spacing: 3px;
+    color: rgba(243, 239, 239, 0.842);
+    font-size: 14px;
+    font-style: italic;
+}
 .search,.search1{
     /* media query needed */
     font-size: 15px;
@@ -55,6 +65,7 @@ h1{
     margin-top: 30px;
     width: 70%;
     border: none;
+    border-radius: 20px;
 }
 
 .title{
@@ -78,7 +89,8 @@ ul li {
     padding: 10px 20px;
     margin-top: 25px;
     
-    background-color: rgba(155, 122, 233, 0.664);
+    /* background-color: rgba(155, 122, 233, 0.664); */
+    background-image: linear-gradient( 109.5deg,  rgba(76,221,242,1) 11.2%, rgba(92,121,255,1) 91.1% );
     
       
       
@@ -87,7 +99,7 @@ ul li {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    
+    cursor: pointer;
     
     
 }
@@ -151,21 +163,20 @@ button:hover{
 
 @media only screen and (max-width:500px){
     html{
-        font-size: 80%;
+        font-size: 90%;
     }
     #container{
-        width: 90%;
+        width: 92%;
+        margin: 25px auto;
     }
-    ul li{
-        font-size: 13px;
-    }
-    .delete{
-        font-size: 10px;
-    }
-    button{
-        font-size: 12px;
-    }
+    
     ul{
-        width:85%;
+        width: 88%;
+    }
+}
+
+@media only screen and (max-width:400px){
+    html{
+        font-size: 80%;
     }
 }
