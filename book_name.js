@@ -24,6 +24,7 @@ const form = document.querySelector('.book-add');
 form.addEventListener('submit',function(e){
     e.preventDefault();
     const value = document.querySelector('.search').value;
+    if(value){
     document.querySelector('.search').value= null;
     const li = document.createElement('li');
     const bookName = document.createElement('span');
@@ -40,7 +41,37 @@ form.addEventListener('submit',function(e){
     li.appendChild(bookName);
     li.appendChild(del);
     list.appendChild(li);
-
+    }
 
 });
 
+const search1 = document.querySelector('.search1');
+
+search1.addEventListener('keyup',function(e){
+    const value = e.target.value.toLowerCase();
+    
+    const books = list.querySelectorAll('li');
+    books.forEach(function(book){
+        const name = book.firstElementChild.textContent;
+        if(name.toLowerCase().indexOf(value) != -1){
+            book.style.display='flex';
+        }
+        else{
+            book.style.display= 'none';
+        }
+    });
+});
+
+const dark = document.querySelector('.dark');
+
+dark.addEventListener('click',function(e){
+    if(document.body.getAttribute('class')!='darkMode'){
+        document.body.setAttribute('class','darkMode');
+        dark.textContent='Dark Mode On';
+        
+    }
+    else{
+        document.body.removeAttribute('class');
+        dark.textContent='Dark Mode'
+    }
+});
